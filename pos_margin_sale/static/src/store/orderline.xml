@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+        <xpath expr="//li[contains(@class, 'orderline')]" position="attributes">
+            <attribute name="t-attf-style">
+                <t t-if="isLessMinimumSalePrice">
+                    {{color: red;}}
+                </t>
+            </attribute>
+        </xpath>
+        <xpath expr="//li[contains(@class, 'orderline')]" position="inside">
+            <p>ini adalah <t t-esc="line.unitPriceInt"/> </p>
+            <p>ini adalah <t t-esc="line.minimumSalePrice"/></p>
+            <p>ini adalah <t t-esc="line.isLessMinimumSalePrice"/></p>
+        </xpath>
+    </t>
+</templates>

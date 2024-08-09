@@ -1,3 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import product_tempalate
+from . import product
+from . import pos_session

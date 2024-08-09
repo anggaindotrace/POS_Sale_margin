@@ -14,3 +14,9 @@ class ProductTemplate(models.Model):
             rec.minimum_sale_price = rec.standard_price * (1 + rec.margin_sale/100)
             
 
+
+
+class ProductProduct(models.Model):
+    _inherit = 'product.product'
+
+    
