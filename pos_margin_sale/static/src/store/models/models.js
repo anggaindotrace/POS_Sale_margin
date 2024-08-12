@@ -52,10 +52,13 @@ patch(Order.prototype, {
         
         if (lines.length > 0) {
             // Display the confirmation popup with the constructed message
-            await this.env.services.popup.add(ConfirmPopup, {
+            const  {confirmed } = await this.env.services.popup.add(ConfirmPopup, {
                 title: _t("Price unit less than minimum price"),
                 body: _t("Some products are below the minimum price. Proceed to payment?")
-        });
+            });
+            if (!confirmed) {
+                return;
+            }
         }
    
         return super.pay(...arguments);
