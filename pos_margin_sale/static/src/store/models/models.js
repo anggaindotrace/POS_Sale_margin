@@ -1,8 +1,10 @@
 /** @odoo-module **/
 
-import { Orderline, Product } from "@point_of_sale/app/store/models";
+import { Orderline, Product, Order } from "@point_of_sale/app/store/models";
 import { patch } from "@web/core/utils/patch";
+import { _t } from "@web/core/l10n/translation";
 import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_popup";
+
 
 patch(Product.prototype, {
     get_minimum_sale_price() {
@@ -41,4 +43,21 @@ patch(Orderline.prototype, {
         };
     }
 
+});
+
+patch(Order.prototype, {
+    async pay() {
+        const orderLines = this.get_orderlines();
+        const lines = orderLines.filter(line => line.get_unit_display_price() < line.product.get_minimum_sale_price());
+        
+        if (lines.length > 0) {
+            // Display the confirmation popup with the constructed message
+            await this.env.services.popup.add(ConfirmPopup, {
+                title: _t("Price unit less than minimum price"),
+                body: _t("Some products are below the minimum price. Proceed to payment?")
+        });
+        }
+   
+        return super.pay(...arguments);
+    }
 });
