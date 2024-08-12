@@ -18,7 +18,7 @@ Long description of module's purpose
     'version': '17.0.1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'point_of_sale', 'product'],
+    'depends': ['base', 'point_of_sale', 'product', 'sale'],
 
     # always loaded
     'data': [
