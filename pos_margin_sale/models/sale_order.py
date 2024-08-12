@@ -11,7 +11,7 @@ class SaleOrder(models.Model):
         check_product = self.check_product_price()
         if len(check_product) > 0 and not skip_check_price:
             product_str = ('\n').join(f" * {product}" for product in check_product)
-            message = f"Price of this product is less than minimum sale price \n\n{product_str} \n\nDo you want to continue with the confirmation for making sale order?"
+            message = f"Price of this product is less than minimum sale price \n\n{product_str} \n\nDo you want to continue with the quotation for making sale order?"
             wizard = self.env['sale.confirmation.wizard'].create({'message': message})
             return {
                 'type': 'ir.actions.act_window',
