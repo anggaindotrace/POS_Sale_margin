@@ -1,0 +1,158 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_margin_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-12 03:35+0000\n"
+"PO-Revision-Date: 2024-08-12 03:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_margin_sale
+#. odoo-javascript
+#: code:addons/pos_margin_sale/static/src/store/orderline.xml:0
+#, python-format
+msgid "*The price of this product is less than minimum sale price"
+msgstr "*Harga produk kurang dari harga jual minimum"
+
+#. module: pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.product_template_inherit_pos_margin_sale
+msgid "<span class=\"oe_grey\"> %</span>"
+msgstr ""
+
+#. module: pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.sale_confirmation_wizard_view_form
+msgid "Cancel"
+msgstr "Batalkan"
+
+#. module: pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.sale_confirmation_wizard_view_form
+msgid "Confirm"
+msgstr "Mengkonfirmasi"
+
+#. module: pos_margin_sale
+#. odoo-python
+#: code:addons/pos_margin_sale/models/sale_order.py:0
+#, python-format
+msgid "Confirm minimum sale price"
+msgstr "Konfirmasi harga jual minimum"
+
+#. module: pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.sale_confirmation_wizard_view_form
+msgid "Confirmation"
+msgstr "Konfirmasi"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: pos_margin_sale
+#. odoo-javascript
+#: code:addons/pos_margin_sale/static/src/store/orderline.xml:0
+#: code:addons/pos_margin_sale/static/src/store/orderline.xml:0
+#, python-format
+msgid "Customer Note"
+msgstr "Catatan Pelanggan"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__display_name
+msgid "Display Name"
+msgstr "Nama Tampilan"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Terakhir Diperbarui oleh"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__write_date
+msgid "Last Updated on"
+msgstr "Terakhir Diperbarui pada"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_product_product__margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_product_template__margin_sale
+msgid "Margin"
+msgstr "Batas"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__message
+msgid "Message"
+msgstr "Pesan"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_product_product__minimum_sale_price
+#: model:ir.model.fields,field_description:pos_margin_sale.field_product_template__minimum_sale_price
+#: model:ir.model.fields,field_description:pos_margin_sale.field_sale_order_line__minimum_sale_price
+msgid "Minimum sale price"
+msgstr "Harga jual minimum"
+
+#. module: pos_margin_sale
+#. odoo-javascript
+#: code:addons/pos_margin_sale/static/src/store/orderline.xml:0
+#: code:addons/pos_margin_sale/static/src/store/orderline.xml:0
+#, python-format
+msgid "Note"
+msgstr "Catatan"
+
+#. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesi Point of Sale"
+
+#. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_product_template
+msgid "Product"
+msgstr "Produk"
+
+#. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_product_product
+msgid "Product Variant"
+msgstr "Varian Produk"
+
+#. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_sale_confirmation_wizard
+msgid "Sale confirmation wizard"
+msgstr "Panduan konfirmasi penjualan"
+
+#. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Order Penjualan"
+
+#. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Baris Pesanan Penjualan"
+
+#. module: pos_margin_sale
+#. odoo-javascript
+#: code:addons/pos_margin_sale/static/src/store/orderline.xml:0
+#, python-format
+msgid "With a"
+msgstr "Dengan"
+
+#. module: pos_margin_sale
+#. odoo-javascript
+#: code:addons/pos_margin_sale/static/src/store/orderline.xml:0
+#, python-format
+msgid "discount"
+msgstr "diskon"
