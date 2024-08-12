@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <form string="Confirmation">
                 <sheet>
-                    <field name="message" />
+                    <field name="message" readonly="1"/>
                 </sheet>
                 <footer>
                     <button string="Confirm" name="action_confirm" type="object" class="oe_highlight"/>
