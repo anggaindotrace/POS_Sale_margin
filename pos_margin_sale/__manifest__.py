@@ -22,8 +22,10 @@ Long description of module's purpose
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
+        'wizard/sale_confirmation.xml',
         'views/product_template_views.xml',
+        'views/sale_order.xml',
     ],
 
     'assets': {
