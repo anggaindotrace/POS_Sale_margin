@@ -39,7 +39,7 @@ patch(Orderline.prototype, {
             attributes: this.attribute_value_ids
                 ? this.findAttribute(this.attribute_value_ids, this.custom_attribute_value_ids)
                 : [],
-            minimumSalePrice: this.product.get_minimum_sale_price(), // Added minimum_sale_price
+            minimumSalePrice: this.env.utils.formatCurrency(this.product.get_minimum_sale_price()), // Added minimum_sale_price
             isLessMinimumSalePrice: this.get_unit_display_price() < this.product.get_minimum_sale_price()
         };
     }

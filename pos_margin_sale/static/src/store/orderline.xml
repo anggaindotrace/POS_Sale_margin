@@ -25,7 +25,7 @@
                         With a <em><t t-esc="line.discount" />% </em> discount
                     </li>
                     <li t-if="line.isLessMinimumSalePrice">
-                        <strong>*The price of this product is less than minimum sale price</strong> 
+                        <strong>*The price of this product is less than minimum sale price <t t-esc="line.minimumSalePrice"/></strong> 
                     </li>
                     <t t-slot="default" />
                     <li t-if="line.customerNote" class="customer-note w-100 p-2 my-1 rounded text-break text-bg-warning text-warning bg-opacity-25">
