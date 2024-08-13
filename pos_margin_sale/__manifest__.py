@@ -26,6 +26,7 @@ Long description of module's purpose
         'wizard/sale_confirmation.xml',
         'views/product_template_views.xml',
         'views/sale_order.xml',
+        'views/res_config_settings.xml'
     ],
 
     'assets': {

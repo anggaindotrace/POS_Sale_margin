@@ -5,6 +5,7 @@ import { PosStore } from "@point_of_sale/app/store/pos_store";
 
 
 patch(PosStore.prototype, {
+    
     _loadProductProduct(products) {
         products.forEach(product => {
             product.minimum_sale_price = product.minimum_sale_price || 0;

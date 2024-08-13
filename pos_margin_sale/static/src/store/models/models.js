@@ -4,6 +4,7 @@ import { Orderline, Product, Order } from "@point_of_sale/app/store/models";
 import { patch } from "@web/core/utils/patch";
 import { _t } from "@web/core/l10n/translation";
 import { ConfirmPopup } from "@point_of_sale/app/utils/confirm_popup/confirm_popup";
+import { ErrorPopup } from "@point_of_sale/app/errors/popups/error_popup";
 
 
 patch(Product.prototype, {
@@ -49,14 +50,22 @@ patch(Order.prototype, {
     async pay() {
         const orderLines = this.get_orderlines();
         const lines = orderLines.filter(line => line.get_unit_display_price() < line.product.get_minimum_sale_price());
-        
+        const blocked = this.pos.config.is_blocked_warning
         if (lines.length > 0) {
             // Display the confirmation popup with the constructed message
-            const  {confirmed } = await this.env.services.popup.add(ConfirmPopup, {
-                title: _t("Price unit less than minimum price"),
-                body: _t("Some products are below the minimum price. Proceed to payment?")
-            });
-            if (!confirmed) {
+            if (!blocked) {
+                const  {confirmed } = await this.env.services.popup.add(ConfirmPopup, {
+                    title: _t("Price unit less than minimum price"),
+                    body: _t("Some products are below the minimum price. Proceed to payment?")
+                });
+                if (!confirmed) {
+                    return;
+                }
+            } else {
+                await this.env.services.popup.add(ErrorPopup, {
+                    title: _t("Price unit less than minimum price"),
+                    body: _t("Some products are below the minimum price. Proceed to payment?")
+                });
                 return;
             }
         }
