@@ -2,25 +2,22 @@
 {
     'name': "POS Margin Sale",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Ensure products are sold above their minimum price with margin checks in POS and sale orders.",
 
     'description': """
-Long description of module's purpose
+        The POS Margin Sale module calculates and enforces the minimum sale price and profit margin for each product. 
+        When a user attempts to sell a product below its minimum price in either a sale order or a POS order, 
+        the system triggers a warning, helping businesses maintain profitability and prevent underpricing.
     """,
 
     'author': "Doodex",
     'website': "https://www.doodex.net",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
     'category': 'Point of Sale',
     'version': '17.0.1.0',
 
-    # any module necessary for this one to work correctly
     'depends': ['base', 'point_of_sale', 'product', 'sale'],
 
-    # always loaded
     'data': [
         'security/ir.model.access.csv',
         'wizard/sale_confirmation.xml',
@@ -36,11 +33,9 @@ Long description of module's purpose
         ]
     },
 
-    # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
     'application': True,
     'installable': True,
 }
-
