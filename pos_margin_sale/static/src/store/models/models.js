@@ -64,7 +64,7 @@ patch(Order.prototype, {
             } else {
                 await this.env.services.popup.add(ErrorPopup, {
                     title: _t("Price unit less than minimum price"),
-                    body: _t("Some products are below the minimum price. Proceed to payment?")
+                    body: _t("Some products are below the minimum price. Please check !")
                 });
                 return;
             }

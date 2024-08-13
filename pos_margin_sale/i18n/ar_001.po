@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-12 03:32+0000\n"
-"PO-Revision-Date: 2024-08-12 03:32+0000\n"
+"POT-Creation-Date: 2024-08-13 04:37+0000\n"
+"PO-Revision-Date: 2024-08-13 04:37+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -24,25 +24,50 @@ msgstr "*سعر هذا المنتج أقل من الحد الأدنى لسعر �
 
 #. module: pos_margin_sale
 #: model_terms:ir.ui.view,arch_db:pos_margin_sale.product_template_inherit_pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.wizard_margin_product_view_form
 msgid "<span class=\"oe_grey\"> %</span>"
 msgstr ""
 
 #. module: pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.wizard_margin_product_view_form
+msgid "Assign"
+msgstr "تعيين"
+
+#. module: pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.wizard_margin_product_view_form
+msgid "Assign Margin"
+msgstr "تعيين الهامش"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_pos_config__is_blocked_warning
+msgid "Blocked warning"
+msgstr "تحذير محظور"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_res_config_settings__blocking_transaction_order
+msgid "Blocking Transaction Order"
+msgstr "حظر أمر المعاملة"
+
+#. module: pos_margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_res_config_settings__blocking_transaction_pos
+msgid "Blocking Transaction POS"
+msgstr "حظر المعاملات في نقاط البيع"
+
+#. module: pos_margin_sale
 #: model_terms:ir.ui.view,arch_db:pos_margin_sale.sale_confirmation_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.wizard_margin_product_view_form
 msgid "Cancel"
 msgstr "يلغي"
+
+#. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
 
 #. module: pos_margin_sale
 #: model_terms:ir.ui.view,arch_db:pos_margin_sale.sale_confirmation_wizard_view_form
 msgid "Confirm"
 msgstr "يتأكد"
-
-#. module: pos_margin_sale
-#. odoo-python
-#: code:addons/pos_margin_sale/models/sale_order.py:0
-#, python-format
-msgid "Confirm minimum sale price"
-msgstr "تأكيد الحد الأدنى لسعر البيع"
 
 #. module: pos_margin_sale
 #: model_terms:ir.ui.view,arch_db:pos_margin_sale.sale_confirmation_wizard_view_form
@@ -51,11 +76,13 @@ msgstr "تأكيد"
 
 #. module: pos_margin_sale
 #: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__create_uid
+#: model:ir.model.fields,field_description:pos_margin_sale.field_wizard_margin_product__create_uid
 msgid "Created by"
 msgstr "تم إنشاؤه بواسطة"
 
 #. module: pos_margin_sale
 #: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__create_date
+#: model:ir.model.fields,field_description:pos_margin_sale.field_wizard_margin_product__create_date
 msgid "Created on"
 msgstr "تم إنشاؤه في"
 
@@ -69,27 +96,32 @@ msgstr "ملاحظة العميل"
 
 #. module: pos_margin_sale
 #: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__display_name
+#: model:ir.model.fields,field_description:pos_margin_sale.field_wizard_margin_product__display_name
 msgid "Display Name"
 msgstr "اسم العرض"
 
 #. module: pos_margin_sale
 #: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__id
+#: model:ir.model.fields,field_description:pos_margin_sale.field_wizard_margin_product__id
 msgid "ID"
 msgstr ""
 
 #. module: pos_margin_sale
 #: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__write_uid
+#: model:ir.model.fields,field_description:pos_margin_sale.field_wizard_margin_product__write_uid
 msgid "Last Updated by"
 msgstr "آخر تحديث بواسطة"
 
 #. module: pos_margin_sale
 #: model:ir.model.fields,field_description:pos_margin_sale.field_sale_confirmation_wizard__write_date
+#: model:ir.model.fields,field_description:pos_margin_sale.field_wizard_margin_product__write_date
 msgid "Last Updated on"
 msgstr "آخر تحديث في"
 
 #. module: pos_margin_sale
 #: model:ir.model.fields,field_description:pos_margin_sale.field_product_product__margin_sale
 #: model:ir.model.fields,field_description:pos_margin_sale.field_product_template__margin_sale
+#: model:ir.model.fields,field_description:pos_margin_sale.field_wizard_margin_product__margin
 msgid "Margin"
 msgstr "هامِش"
 
@@ -114,9 +146,22 @@ msgid "Note"
 msgstr "ملحوظة"
 
 #. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "تهيئة نقطة البيع "
+
+#. module: pos_margin_sale
 #: model:ir.model,name:pos_margin_sale.model_pos_session
 msgid "Point of Sale Session"
 msgstr "جلسة نقطة البيع"
+
+#. module: pos_margin_sale
+#. odoo-javascript
+#: code:addons/pos_margin_sale/static/src/store/models/models.js:0
+#: code:addons/pos_margin_sale/static/src/store/models/models.js:0
+#, python-format
+msgid "Price unit less than minimum price"
+msgstr "وحدة السعر أقل من الحد الأدنى للسعر"
 
 #. module: pos_margin_sale
 #: model:ir.model,name:pos_margin_sale.model_product_template
@@ -124,14 +169,14 @@ msgid "Product"
 msgstr "المنتج"
 
 #. module: pos_margin_sale
-#: model:ir.model,name:pos_margin_sale.model_product_product
-msgid "Product Variant"
-msgstr "متغير المنتج "
+#: model:ir.model.fields,field_description:pos_margin_sale.field_wizard_margin_product__product_template_ids
+msgid "Products"
+msgstr "منتجات"
 
 #. module: pos_margin_sale
 #: model:ir.model,name:pos_margin_sale.model_sale_confirmation_wizard
 msgid "Sale confirmation wizard"
-msgstr ""
+msgstr "معالج تأكيد البيع"
 
 #. module: pos_margin_sale
 #: model:ir.model,name:pos_margin_sale.model_sale_order
@@ -142,6 +187,40 @@ msgstr "أمر البيع"
 #: model:ir.model,name:pos_margin_sale.model_sale_order_line
 msgid "Sales Order Line"
 msgstr "بند أمر المبيعات"
+
+#. module: pos_margin_sale
+#: model:ir.model,name:pos_margin_sale.model_wizard_margin_product
+msgid "Set margin on every product"
+msgstr "تعيين الهامش على كل منتج"
+
+#. module: pos_margin_sale
+#. odoo-javascript
+#: code:addons/pos_margin_sale/static/src/store/models/models.js:0
+#, python-format
+msgid "Some products are below the minimum price. Please check !"
+msgstr "بعض المنتجات أقل من السعر الأدنى. يرجى التحقق!"
+
+#. module: pos_margin_sale
+#. odoo-javascript
+#: code:addons/pos_margin_sale/static/src/store/models/models.js:0
+#, python-format
+msgid "Some products are below the minimum price. Proceed to payment?"
+msgstr "بعض المنتجات أقل من السعر الأدنى هل تريد المتابعة إلى الدفع؟"
+
+#. module: pos_margin_sale
+#. odoo-python
+#: code:addons/pos_margin_sale/models/product.py:0
+#: model:ir.actions.server,name:pos_margin_sale.product_template_margin_sale_action_server
+#, python-format
+msgid "Update margin sale"
+msgstr "تحديث بيع الهامش"
+
+#. module: pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.res_config_settings_view_form_pos_margin_sale
+#: model_terms:ir.ui.view,arch_db:pos_margin_sale.res_config_settings_view_form_sale_margin_sale
+msgid ""
+"Warning price less than minimum sale price will blocking the transaction."
+msgstr "سعر تحذير أقل من الحد الأدنى لسعر البيع سوف يؤدي إلى حظر المعاملة."
 
 #. module: pos_margin_sale
 #. odoo-javascript

@@ -24,9 +24,10 @@ Long description of module's purpose
     'data': [
         'security/ir.model.access.csv',
         'wizard/sale_confirmation.xml',
+        'wizard/wizard_margin_product.xml',
+        'views/res_config_settings.xml',
         'views/product_template_views.xml',
         'views/sale_order.xml',
-        'views/res_config_settings.xml'
     ],
 
     'assets': {
