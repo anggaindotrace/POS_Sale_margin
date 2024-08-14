@@ -14,22 +14,24 @@
     'website': "https://www.doodex.net",
 
     'category': 'Point of Sale',
-    'version': '17.0.1.0',
+    'version': '16.0.1.0',
 
-    'depends': ['base', 'point_of_sale', 'product', 'sale'],
+    'depends': ['base', 'point_of_sale', 'product', 'sale', 'stock_account'],
 
     'data': [
         'security/ir.model.access.csv',
         'wizard/sale_confirmation.xml',
         'wizard/wizard_margin_product.xml',
         'views/res_config_settings.xml',
-        'views/product_template_views.xml',
+        'views/products.xml',
         'views/sale_order.xml',
     ],
 
     'assets': {
-        'point_of_sale._assets_pos': [
-            'pos_margin_sale/static/src/**/*',
+        'point_of_sale.assets': [
+            'pos_margin_sale/static/src/**/*.js',
+            'pos_margin_sale/static/src/**/*.xml',
+            'pos_margin_sale/static/src/**/*.scss',
         ]
     },
 
