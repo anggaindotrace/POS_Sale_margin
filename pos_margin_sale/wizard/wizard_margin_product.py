@@ -15,7 +15,7 @@ class WizardMarginProduct(models.TransientModel):
     def _compute_product_model(self):
         active_model = self._context.get('active_model')
         for rec in self:
-            if active_model == 'product.tempalate':
+            if active_model == 'product.template':
                 rec.is_product = True
             else:
                 rec.is_product = False

@@ -12,7 +12,7 @@
 
     'author': "Doodex",
     'website': "https://www.doodex.net",
-
+    'license': "AGPL-3",
     'category': 'Point of Sale',
     'version': '17.0.1.0',
 
@@ -24,6 +24,7 @@
         'wizard/wizard_margin_product.xml',
         'views/res_config_settings.xml',
         'views/products.xml',
+        # 'views/product_template_views.xml',
         'views/sale_order.xml',
     ],
 
@@ -38,4 +39,5 @@
     ],
     'application': True,
     'installable': True,
+    'images': ["static/description/banner.png"],
 }
